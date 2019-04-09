@@ -1,0 +1,35 @@
+{
+  "name": "@sphericalelephant/express-package-version",
+  "version": "0.1.0",
+  "description": "A simple route handler that displays the version of the package that is running the web appication server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --recursive",
+    "lint": "eslint .",
+    "coverage": "NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov npm test",
+    "test-ci": "NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov npm test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SphericalElephant/express-package-version.git"
+  },
+  "keywords": [
+    "express",
+    "package",
+    "version"
+  ],
+  "author": "Patrick Sturm <p.sturm@sphericalelephant.com> (https://sphericalelephant.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SphericalElephant/express-package-version/issues"
+  },
+  "homepage": "https://github.com/SphericalElephant/express-package-version#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-loopback": "^13.0.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0"
+  }
+}
